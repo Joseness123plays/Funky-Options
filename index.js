@@ -143,33 +143,6 @@ function TicTacToe(){
     }   
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-//Function for rock_paper_scissors
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-function rock_paper_scissors(){
-    document.getElementById("console").innerText = "";
-    let bot1 = document.createElement("div");
-    let bot1c = Math.floor(Math.random()*3);
-    if(bot1c==0){
-        bot1.innerText = "Rock";
-    }
-    if(bot1c==1){
-        bot1.innerText = "Paper";
-    }
-    if(bot1c==2){
-        bot1.innerText = "Scissors";
-    }
-    let player1 = document.createElement("div");
-    let player1c;
-
-    let roshambo = [rock = document.createElement("button"). rock.innerText="rock",paper = document.createElement("button"),scissors = document.createElement("button")];
-
-    for(let i=1;i<4;i++){
-        document.getElementById("console").appendChild(roshambo[i-1]);
-    }
-
-    document.getElementById("console").appendChild(bot1);
-}
-//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Function for clearing
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function Clear(){
