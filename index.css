@@ -1,0 +1,29 @@
+body{
+  background: linear-gradient(skyblue,skyblue,skyblue,skyblue,skyblue,lightblue,blue,blue,darkturquoise,gold,green,green,green);
+  background-attachment: fixed;
+  color: #ffffff;
+  width: 100%;
+  height: auto;
+  }
+  .a{
+  padding:1%
+  }
+  .text{
+    border-style: outset;
+    width: 100%;
+    border-color:lightgreen green;
+  }
+  #end{
+    margin-top:20%;
+  }
+  #console{
+    color: darkblue;
+  }
+  #coint{
+      width: 10%;
+      height: 10%;
+  }
+  #coinh{
+      width: 10%;
+      height: 10%;
+  }
