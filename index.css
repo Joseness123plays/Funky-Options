@@ -27,3 +27,10 @@ body{
       width: 10%;
       height: 10%;
   }
+  #math_box{
+    border-style: outset;
+    height: auto;
+    width: 50%;
+    background: linear-gradient(cyan,red);
+
+  }

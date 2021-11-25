@@ -143,6 +143,137 @@ function TicTacToe(){
     }   
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Function for Math Button
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function math_button(){
+    document.getElementById("console").innerText = "";
+
+    //The box
+    let box = document.createElement("div");
+    box.id = "math_box";
+    box.style.color = "black";
+    document.getElementById("console").appendChild(box);
+
+    //Functionallity (Required before)
+    let num1 = Math.floor(Math.random()*13);
+    let num2 = Math.floor(Math.random()*13);
+    let num3 = num1*num2;
+    let r = 0;
+
+    //box contents
+        let text1 = document.createElement("h1");
+            text1.innerText = "Math button";
+            text1.style.border = "dotted";
+            text1.style.borderColor = "yellow";
+            text1.style.width = "50%";
+        let line = document.createElement("hr");
+        let line2 = document.createElement("hr");
+        let line3 = document.createElement("hr");
+        let text2 = document.createElement("h2");
+            text2.innerText = (num1+"X"+num2);
+            text2.style.border = "inset";
+            text2.style.width = "50%";
+            text2.style.borderColor = "blue";
+        let text3 = document.createElement("h3");
+            text3.innerText = "What is?";
+        let input = document.createElement("input");
+            input.id = "input"
+        let sumbit = document.createElement("button");
+            sumbit.innerText = "sumbit";
+        let reset = document.createElement("button");
+            reset.innerText = "reset";
+            reset.disabled = true;
+        let br = document.createElement("br");
+        let s = document.createElement("span");
+            s.innerText = r;
+        let str = document.createElement("span");
+            str.innerText = "Streak: ";
+            str.id = "str";
+        let text4 = document.createElement("h3");
+            text4.innerText = "";
+        let text5 = document.createElement("h2");
+            text5.innerText = "";
+        let Correct_sound = document.createElement("audio");
+            Correct_sound.src = "/Sound effects/correct.wav";
+        let Incorrect_sound = document.createElement("audio");
+            Incorrect_sound.src = "/Sound effects/Incorrect.wav";
+
+
+    //More Functionallity (This needs to come after)
+    function streak_color(){
+        if(r==0){
+            s.style.color = "grey";
+        }
+        if(r>=1){
+            s.style.color = "orange";
+        }
+        if(r>=2){
+            s.style.color = "lightgreen";
+        }
+        if(r>=4){
+            s.style.color = "green";
+        }
+        if(r>=8){
+            s.style.color = "lightblue";
+        }
+        if(r>=12){
+            s.style.color = "blue";
+        }
+        if(r>=20){
+            s.style.color = "purple";
+        }
+    }
+
+    streak_color();
+
+    sumbit.onclick = function(){
+        sumbit.disabled = true;
+        ans = input.value;
+        if(ans==num3){
+            text4.innerText = "You are...";
+            Correct_sound.play();
+            r++;
+            setTimeout(function(){ text5.innerText = "Correct!"; str.innerText = "Streak: "; s.innerText = r; document.getElementById("str").appendChild(s); streak_color(); reset.disabled = false; }, 1000);
+            console.log(r);
+        }
+        else{
+            text4.innerText = "You are...";
+            Incorrect_sound.play();
+            r = 0;
+            setTimeout(function(){ text5.innerText = "Incorrect!"; str.innerText = "Streak: "; s.innerText = r; document.getElementById("str").appendChild(s); streak_color(); reset.disabled = false; }, 1000);
+            console.log(r);
+        }
+    }
+    reset.onclick = function(){
+        num1 = Math.floor(Math.random()*13);
+        num2 = Math.floor(Math.random()*13);
+        num3 = num1*num2;
+        text4.innerText = "";
+        text5.innerText = "";
+        text2.innerText = (num1+"X"+num2);
+        sumbit.disabled = false;
+        reset.disabled = true;
+    }
+
+    //appends/output
+    document.getElementById("math_box").appendChild(text1);
+    document.getElementById("math_box").appendChild(line);
+    document.getElementById("math_box").appendChild(text3);
+    document.getElementById("math_box").appendChild(text2);
+    document.getElementById("math_box").appendChild(line2);
+    document.getElementById("math_box").appendChild(input);
+    document.getElementById("math_box").appendChild(sumbit);
+    document.getElementById("math_box").appendChild(reset);
+    document.getElementById("math_box").appendChild(br);
+    document.getElementById("math_box").appendChild(str);
+    document.getElementById("str").appendChild(s);
+    document.getElementById("math_box").appendChild(line3);
+    document.getElementById("math_box").appendChild(text4);
+    document.getElementById("math_box").appendChild(text5);
+    document.getElementById("math_box").appendChild(Correct_sound);
+    document.getElementById("math_box").appendChild(Incorrect_sound);
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Function for clearing
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function Clear(){
