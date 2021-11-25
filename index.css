@@ -29,6 +29,6 @@ body{
   }
   #math_box{
     border-style: outset;
-    background: lineatr-gradient(cyan,red);
+    background: linear-gradient(cyan,red);
     width: 100%;
   }
