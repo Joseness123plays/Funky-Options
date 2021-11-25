@@ -31,7 +31,9 @@ body{
     border-style: outset;
     background: linear-gradient(cyan,red);
     width: 100%;
+    height: auto;
   }
 input{
-   background: linear-gradient(cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
+   background: linear-gradient(to left,
+cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
 }
