@@ -32,3 +32,6 @@ body{
     background: linear-gradient(cyan,red);
     width: 100%;
   }
+input{
+   background: linear-gradient(cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
+}
