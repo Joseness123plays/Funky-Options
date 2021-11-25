@@ -15,33 +15,29 @@ function dice(){
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //function to reverse text
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// +text.split("").reverse().join("");
+
 function reversetext(){
     document.getElementById("console").innerText = "";
-
+    
     let btn = document.createElement("button");
     btn.innerText = "sumbit";
-    btn.id = "btn"
-
-    let reset = document.createElement("button");
-    reset.innerText = "reset";
-    reset.id = "reset"
 
     let sumbit = document.createElement("input");
     sumbit.id = "input";
 
+    let text;
+    let text2 = document.createElement("span");
+        text2.innerText = "";
+
     document.getElementById("console").appendChild(btn);
     document.getElementById("console").appendChild(sumbit);
+    document.getElementById("console").appendChild(text2);
 
     btn.onclick = function(){
-        let text = document.getElementById("input").value;
-        let text2 = document.createElement("p");
-        text2.innerText = "Reversed word: "+text.split("").reverse().join("");
-        document.getElementById("console").appendChild(text2);
-        document.getElementById("btn").disabled = true;
-        
-    }
-    reset.onclick = function(){
-        
+        text = document.getElementById("input").value;
+        text2.innerText = text+" backwards: "+text.split("").reverse().join("");;
     }
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -97,17 +93,20 @@ function word_length(){
     
         let sumbit = document.createElement("input");
         sumbit.id = "input";
+
+        let text;
+        let text2 = document.createElement("span");
+            text2.innerText = "";
+
+        let a = 0;
     
         document.getElementById("console").appendChild(btn);
         document.getElementById("console").appendChild(sumbit);
-    
+        document.getElementById("console").appendChild(text2);
         btn.onclick = function(){
-            let text = document.getElementById("input").value;
-            let text2 = document.createElement("p");
-            text2.innerText = "Charaters: "+text.length;
-            document.getElementById("console").appendChild(text2);
-            document.getElementById("sumbit").disabled = true;
-            
+            a=1;
+            text = document.getElementById("input").value;
+            text2.innerText = text+" is "+text.length+" letters long";
         }
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
