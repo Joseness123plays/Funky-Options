@@ -29,8 +29,6 @@ body{
   }
   #math_box{
     border-style: outset;
-    height: auto;
-    width: 50%;
-    background: linear-gradient(cyan,red);
+    background: lineatr-gradient(cyan,red);
 
   }
