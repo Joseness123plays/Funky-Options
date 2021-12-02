@@ -15,9 +15,6 @@ function dice(){
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //function to reverse text
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-// +text.split("").reverse().join("");
-
 function reversetext(){
     document.getElementById("console").innerText = "";
     
@@ -127,7 +124,7 @@ function TicTacToe(){
                 tictactoe[i-1].disabled = true;
                 ++tic;
             }
-            else {
+        else {
                 tictactoe[i-1].innerText = "O";
                 tictactoe[i-1].disabled = true;
                 tic=tic-tic;
@@ -193,9 +190,9 @@ function math_button(){
         let text5 = document.createElement("h2");
             text5.innerText = "";
         let Correct_sound = document.createElement("audio");
-            Correct_sound.src = "/Sound effects/correct.wav";
+            Correct_sound.src = "/Sound_effects/correct.wav";
         let Incorrect_sound = document.createElement("audio");
-            Incorrect_sound.src = "/Sound effects/Incorrect.wav";
+            Incorrect_sound.src = "/Sound_effects/Incorrect.wav";
 
 
     //More Functionallity (This needs to come after)
@@ -235,7 +232,7 @@ function math_button(){
             setTimeout(function(){ text5.innerText = "Correct!"; str.innerText = "Streak: "; s.innerText = r; document.getElementById("str").appendChild(s); streak_color(); reset.disabled = false; }, 1000);
             console.log(r);
         }
-        else{
+    else{
             text4.innerText = "You are...";
             Incorrect_sound.play();
             r = 0;
@@ -271,6 +268,39 @@ function math_button(){
     document.getElementById("math_box").appendChild(text5);
     document.getElementById("math_box").appendChild(Correct_sound);
     document.getElementById("math_box").appendChild(Incorrect_sound);
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//BUILT TO CRASH WEEEEEEEEEEEEEEEEEEEE (I accedently found this when making wack a mole so I resused all the code for Wack a mole)
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function crash() {
+    document.getElementById("console").innerText = "";
+    let o = 0
+    let holes = [];
+    let random = Math.floor(Math.random()*16);
+    for (let i = 0;i<=15;i++) {
+        holes.push(document.createElement("button"));
+        holes[i].innerText = "----";
+        holes[i].onclick = ()=>{}
+        document.getElementById("console").appendChild(holes[i])
+        o++;
+        if(o>=4){
+            let br = document.createElement("br");
+            document.getElementById("console").appendChild(br);
+            o = o-o;
+        }
+    }
+    for(let roundz=15;roundz>=0;){
+        setTimeout(() => {
+            holes[random].innerText="----"
+            console.log(random)
+            console.log("Rounds left "+roundz)
+            roundz--
+        }, 1000);
+        setTimeout(() => {
+            holes[random].innerText="mole!"
+            console.log(random)
+        }, 1000);
+    } 
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Function for clearing
