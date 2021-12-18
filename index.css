@@ -1,20 +1,21 @@
 body{
   background: linear-gradient(skyblue,skyblue,skyblue,skyblue,skyblue,lightblue,blue,blue,darkturquoise,gold,green,green,green);
   background-attachment: fixed;
-  }
-  .a{
-  padding: 1%
-  }
-  .text{
-    border-style: outset;
-    width: 100%;
-    border-color:lightgreen green;
-  }
-  #console{
-    background: linear-gradient(to top,cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
-    width:88%;
-    border: solid;
-    border-color:black;
+}
+.a{
+padding: 1%
+}
+.text{
+  color: white;
+  border-style: outset;
+  width: 100%;
+  border-color:lightgreen green;
+}
+#console{
+  background: linear-gradient(to top,cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
+  width:88%;
+  border: solid;
+  border-color:black;
 }
 #cons_shell{
   width:97%;
