@@ -1,9 +1,18 @@
-for(let i=1;i<Math.floor(window.innerWidth/75);i++){
-    let rope = document.createElement("img")
-    rope.src = "pixil-frame-0.png"
-    rope.width = 75
-    document.querySelector("#decor").appendChild(rope)
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//A function to take care of some CSS
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+function load_CSS(){
+    for(let i=1;i<Math.floor(window.innerWidth/75);i++){
+        let rope = document.createElement("img")
+        rope.src = "pixil-frame-0.png"
+        rope.width = 75
+        document.querySelector("#decor").appendChild(rope)
+        }
+    document.querySelector("#console").style.height = ((70/100)*window.innerHeight)+"px"  
+    document.querySelector("#cons_shell").style.height = ((95/100)*window.innerHeight)+"px"
+    document.querySelector("#PC_Bottom").style.height = ((40/100)*window.innerHeight)+"px"
 }
+load_CSS()
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //function for dice
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -154,6 +163,7 @@ function math_button(){
     let box = document.createElement("div");
     box.id = "math_box";
     box.style.color = "black";
+    box.style.height = document.querySelector("#console").style.height
     document.getElementById("console").appendChild(box);
 
     //Functionallity (Required before)
@@ -307,6 +317,17 @@ function crash() {
             console.log(random)
         }, 1000);
     } 
+}
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Fuction for Wack_A_Mole (I had to use an iframe to stop it from running in the backgroubd)
+//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+document.querySelector("#Wack-A-Mole").onclick = () => {
+    document.getElementById("console").innerText = "";
+    let iframe = document.createElement("iframe");
+    iframe.src = "Games\\Wack_A_Mole\\Wack.html"
+    iframe.width = "100%"
+    iframe.height = "100%"
+    document.querySelector("#console").appendChild(iframe)
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 //Function for clearing

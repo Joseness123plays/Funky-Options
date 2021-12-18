@@ -1,12 +1,9 @@
 body{
   background: linear-gradient(skyblue,skyblue,skyblue,skyblue,skyblue,lightblue,blue,blue,darkturquoise,gold,green,green,green);
   background-attachment: fixed;
-  color: white;
-  width: 100%;
-  height: auto;
   }
   .a{
-  padding:1%
+  padding: 1%
   }
   .text{
     border-style: outset;
@@ -14,28 +11,35 @@ body{
     border-color:lightgreen green;
   }
   #console{
-    border-style: inset;
-    border-color:darkred;
-    background-color: brown;
-    color:wheat;
-    min-width: 50%;
-    max-width: 75%;
+    background: linear-gradient(to top,cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
+    width:88%;
+    border: solid;
+    border-color:black;
 }
-  #coint{
-      width: 10%;
-      height: 10%;
-  }
-  #coinh{
-      width: 10%;
-      height: 10%;
-  }
-  #math_box{
-    border-style: outset;
-    background: linear-gradient(cyan,red);
-    width: 100%;
-    height: auto;
-  }
-input{
-   background: linear-gradient(to left,
-cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
+#cons_shell{
+  width:97%;
+  border-style: inset;
+  border-color:black;
+  background-color: tan; 
+}
+#title{
+  width:25%;
+  color:black;
+  border: solid;
+  border-color: #3C3C3C;
+}
+#coint{
+  width: 10%;
+  height: 10%;
+}
+#coinh{
+  width: 10%;
+  height: 10%;
+}
+#math_box{
+  border-style: outset;
+  background: linear-gradient(cyan,red);
+}
+table{
+  color: white;
 }
