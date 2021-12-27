@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body align="center">
+        <div id="Loader">
+            <div id="Loader-Items"><h1 id="Loader-TXT">READING</h1></div>
+        </div>
+        <script>
+                        (function(){
+    let loader = document.getElementById("Loader")
+    let loaderTXT = document.getElementById("Loader-TXT")
+    document.body.style.overflow = "hidden"; 
+    loader.style.height = (window.innerHeight)+"px"
+    let i = 0;
+    let timing = setInterval(() => {
+        if(i<3){
+            loaderTXT.innerText = loaderTXT.innerText + "." 
+            i++
+        }
+        else{
+            loaderTXT.innerText = "READING"
+            i=0
+        }
+    },500);
+    window.addEventListener("load",()=>{
+        clearInterval(timing)
+        let s = document.createElement("audio")
+        s.src = "Done.mp3"
+        s.play()
+        loaderTXT.innerText = "DONE!"
+        loaderTXT.style.color = "#00FF00"
+        setTimeout(() => {loader.remove(); document.body.style.margin = "8px"; document.body.style.overflow = "visible"; document.getElementById("option").style.position = "relative";},444);
+    
+        removeEventListener("load",window)
+        })
+    })();
+        </script>
+        <link rel="stylesheet" href="th.css">
+        <h1 id="Title">Math Button</h1>
+        <hr>
+        <h1 id="sub">!Choose a mode!</h1>
+        <hr>
+        <div id="option"style="background-color: rgb(43, 255, 0); width=5px;">
+            <img src="Signs/Add.png" width="40%" id="a" onmouseover="A_OnHover()" onmouseleave="A_OnLeave()" onmouseup="a()" onmousedown="A_OnMouseDown()"><img src="Signs/Minus.png" width="40%" id="b" onmouseover="B_OnHover()" onmouseleave="B_OnLeave()" onmouseup="b()" onmousedown="B_OnMouseDown()">
+            <br>
+            <img src="Signs/X.png" width="40%" id="c" onmouseover="C_OnHover()" onmouseleave="C_OnLeave()" onmouseup="c()" onmousedown="C_OnMouseDown()"><img src="Signs/Division.png" width="40%" id="d" onmouseover="D_OnHover()" onmouseleave="D_OnLeave()" onmouseup="d()" onmousedown="D_OnMouseDown()">
+        </div>
+        <script src="Button.js"></script>
+    </body>
+</html>

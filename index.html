@@ -2,218 +2,93 @@
 <html>
     <head>
         <title>Funky Options</title>
-        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="#">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <link rel="shortcut icon" href="#">
     </head>
     <body>
-        0.10.1
-        <div align="center">
+        <div id="Loader"style="z-index: Infinity">
+            <div id="Loader-Items"><h1 id="Loader-TXT">LOADING</h1></div>
+        </div>
+        <script>
+            (function(){
+    let loader = document.getElementById("Loader")
+    let loaderTXT = document.getElementById("Loader-TXT")
+    let s = document.createElement("audio")
+    s.src = "Web_Assets\\Loaded.mp3"
+    document.body.style.overflow = "hidden"; 
+    loader.style.height = (window.innerHeight)+"px"
+    let i = 0;
+    let timing = setInterval(() => {
+        if(i<3){
+            loaderTXT.innerText = loaderTXT.innerText + "." 
+            i++
+        }
+        else{
+            loaderTXT.innerText = "LOADING"
+            i=0
+        }
+    },500);
+    window.addEventListener("load",()=>{
+        clearInterval(timing)
+        loaderTXT.style.animationPlayState = "paused"
+        loaderTXT.innerText = "Loaded!"
+        loaderTXT.style.color = "#00FF00"
+        setTimeout(() => {
+            loader.remove(); 
+            document.body.style.margin = "8px"; 
+            document.body.style.overflow = "visible"; 
+            document.getElementById("title").style.position = "absolute"
+            document.getElementById("button").style.position = "absolute"
+        }, 2222);
+        loaderTXT.animate([
+        {transform: "rotateZ(360deg)" },
+        ], {
+        duration: 2000,
+        iterations: Infinity,
+        timing: "ease-in-out"
+        });
+    
+        removeEventListener("load",window)
+        })
+    })();
+        </script>
+        0.12.0
+        <video id="Background_Video" autoplay loop>
+            <source src="Web_Assets\Background\CampFire.mp4">
+
+          </video>
+        <main align="center">
             <div id="decor"></div>
         <hr>
             <h1 class="text">Funky Options</h1>
-        <hr>
-        <span class="a"><button onclick="dice()">Dice</button></span>
-        <span class="a"><button onclick="reversetext()">Reverse text</button></span>
-        <span class="a"><button onclick="coinflip()">Coin flip</button></span>
-        <span class="a"><button onclick="buttonclicker()">Button clicker</button></span>
-        <span class="a"><button onclick="word_length()">Word length</button></span>
-        <span class="a"><button onclick="TicTacToe()">TicTacToe</button></span>
-        <span class="a"><button onclick="math_button()">Math Button</button></span>
-        <span class="a"><button id="Wack-A-Mole">Wack-A-Mole!</button></span>
-        <span class="a"><a href="beta_web.html"><button>test site</button></a></span>
-        <span class="a"><button onclick="crash()">CRAZH<br>(cuz after all y not lol)</button></span>
-        <span class="a"><button onclick="Clear()">Clear</button></span>
+        <hr>        
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Dice_Roller_Floppy.png" alt="Roll a dice" onclick="dice()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Reverse_Text_Floppy.png" alt="Reverse text (Update soon)" onclick="reversetext()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Coin_Flip_Floppy.png" alt="Flip a coin" onclick="coinflip()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Button_Clicker_Floppy.png" alt="Click A boring button -_-" onclick="buttonclicker()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Word_Length_Floppy.png" alt="Find how long a word is" onclick="word_length()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\TicTacToe_Floppy.png" alt="A Game of Tic Tac Toe" onclick="TicTacToe()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Math_Button.png" alt="A Game of Math Button" onclick="math_button()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Wack_A_Mole_Floppy.png" alt="A Game of Wack A Mole" onclick="Wack_A_Mole()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Info_Floppy.png" alt="Info about this website" onclick="info()" width="15%"></a>
+                <a href="#console"><img class="Floppy" src="Web_Assets\floppy\Crash_Floppy.png" alt="Crash" onclick="crash()" width="15%"></a>
         <hr>
         <h1 class="text">Output:</h1>
-
-        <div id="cons_shell"><div id=title><h1><u>PC</u></h1></div><div id="console"></div></div>
-        <img id="PC_Bottom" src="PC_bottom.png" width="100%">
-        </div>
+            <img src="Web_Assets\PC\PC_Top2.png" id="Top2">
+            <h1 id="title" align="center"><u align="center"><><i align="center">box-Boi-9999</i><><br></u></h1>
+            <img src="Web_Assets\PC\PC_Top1.png" id="Top1">
+            <img id="left" src="Web_Assets\PC\PC_Side.png">
+            <div id="console"></div>
+            <img id="right" src="Web_Assets\PC\PC_Side2.png">
+            <img class="Bottom" src="Web_Assets\PC\PC_bottom.png">
+            <img class="drive" src="Web_Assets\PC\Floopy_Disc.png">
+            <img id="button" src="\Web_Assets\PC\Button.png" onmouseover="Mouse_Over()" onmouseleave="Mouse_Leave()" onmouseup="Mouse_Over()" onmousedown="Console_Wipe()">
+            <img class="Bottom" src="Web_Assets\PC\PC_bottom.png">
+            <img class="drive" src="Web_Assets\PC\Disc_Drive.png">
+            <img class="Bottom" src="Web_Assets\PC\PC_bottom.png">
+        </main>
         <hr id="end">
-        <p>About:<br>This is "Funky Option". A small app with a few Options. Yes you can mess around with them. This works on android too. Enjoy the app.</p>
-        <table bgcolor="black">
-            <tr>
-                <th bgcolor="darkgray">Dice</th>
-                <th bgcolor="gray">It rolls a dice and gives you the number of the dice</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Reverse text</th>
-                <th bgcolor="gray">Feed it some text and reverse it</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Coin flip</th>
-                <th bgcolor="gray">Flips a coin</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Button clicker</th>
-                <th bgcolor="gray">Gives you a button to click and how many times you clicked it</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Word Length</th>
-                <th bgcolor="gray">Feed it some text and it will tell you how many charater there are <br> a.k.a it will tell you how long a word is</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Tictactoe</th>
-                <th bgcolor="gray">Makes a game of tictactoe</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Math button</th>
-                <th bgcolor="gray">Makes a game of math button</th>
-            </tr>
-            <tr>
-                <th bgcolor="darkgray">Clear</th>
-                <th bgcolor="gray">Clears output box (Wat did u especc)</th>
-            </tr>
-        </table> 
-        <br>
-        <table id="table" bgcolor="black">
-            <tr bgcolor="darkblue">
-                <th>(during november 2021) I don't remember the day lol</th>
-                <th>0.1.0</th>
-                <th>Function button was created, with only a function to roll a dice</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>(during november 2021) I also dont remember this day</th>
-                <th>0.2.0</th>
-                <th>Added a test button that makes a button</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>(during november 2021) Nope no day</th>
-                <th>0.2.1</th>
-                <th>renamed the button to reverse text.<br> changed backgroud/ Reverse text button now makes a button with input box</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 8, 2021 (finally a day)</th>
-                <th>0.3.0</th>
-                <th>Added a "spam" button that makes random text. <br> Found a glich where the Reverse text button would disable it's self if the screen is to little. <br> Also added this table with change log. <br> I can't find a fix ;-;<br>Seems like it gets disabled when the "spam" button is clicked</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 8,2021 8:50 p.m.</th>
-                <th>0.3.1</th>
-                <th>Removed the spam function<br>Changed some code<br>finished Reverse text</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 8,2021 9:33 p.m.</th>
-                <th>0.4.0</th>
-                <th>Added a coin flip function</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 8,2021 10:06 p.m.</th>
-                <th>0.5.0</th>
-                <th>Added an unfinished button that makes a tictactoe game.<br> Some how the reverse text button is now disabled<br>Ima give the glich a name. The "Disabled" glich</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 8,2021 10:23 p.m.</th>
-                <th>0.5.1</th>
-                <th>Made a decoy button in a attempt to fix disabled glich<br>I didn't work<br>Then I removed it<br> ima go to sleep brrrrrrrrrrrrrrrrrrr</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 9,2021 6:16 a.m.</th>
-                <th>0.5.2</th>
-                <th>Removed the decoy button. Added a clear button to clear the output box.<br>Changed the space between the buttons. <br>Seems to fix the disabled glich. Worked on tictactoe a bit</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 9,2021 7:56 a.m.</th>
-                <th>0.5.3</th>
-                <th>You can only press sumbit once in reverse text</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 9,2021 8:29 a.m.</th>
-                <th>0.5.4</th>
-                <th>Added some icons to Coin flip, Removed clear function and button.</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 9,2021 9:05 p.m.</th>
-                <th>0.5.5</th>
-                <th>Messed around with tictactoe function, changed a bit in the "about" section</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 10,2021 7:48 a.m.</th>
-                <th>0.5.6</th>
-                <th>Removed the tictactoe function, it was too hard to work on</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 11,2021 8:15 p.m.</th>
-                <th>0.6.0</th>
-                <th>Added a function called "Word Length" and.... accedently removed reverse text lol</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 11,2021 8:24 p.m.</th>
-                <th>0.6.1</th>
-                <th>Added reverse text back!</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 11,2021 8:8:36 p.m.</th>
-                <th>0.7.0</th>
-                <th>Added test site<br>To test functions<br>And I changed the background </th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 12,2021 6:00 p.m.</th>
-                <th>0.8.0</th>
-                <th>Added TicTacToe back<br>WOOOOOOOOOOOOOO :)<br>For some reason Word length is broken ill fix it soon<br>And TicTacToe does not tell you who won yet</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 12,2021 6:17 p.m.</th>
-                <th>0.8.1</th>
-                <th>Fixed every thing. and added clear</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 13,2021 9:33 a.m.</th>
-                <th>0.8.2</th>
-                <th>Just chhanged some tables that all lol</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 13,2021 2:32 p.m.</th>
-                <th>0.8.3</th>
-                <th>Removed test site.<br>Added a small thing in the top left corner that tells version</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 15,2021 7:59 a.m.</th>
-                <th>0.8.4</th>
-                <th>Im gonna upload this to github</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 15,2021 8:12 p.m.</th>
-                <th>0.8.5</th>
-                <th>updated some code and changed file location</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 24,2021 9:15 p.m.</th>
-                <th>0.9.0</th>
-                <th>Added "Math button" wicth was another project I was working on</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>November 24,2021 10:14 p.m.</th>
-                <th>0.9.1</th>
-                <th>Changed a bit of style on input box lol</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>November 24,2021 10:14 p.m.</th>
-                <th>0.9.2</th>
-                <th>Anything in the output box now has a brown background.<br>Fixed some bug with word length and Reverse text</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>Decemner 1,2021 10:14 p.m.</th>
-                <th>0.10.0</th>
-                <th>Readded the test site. Added a button THAT WILL CRASH THE TAB lmao.</th>
-            </tr>
-            <tr bgcolor="blue">
-                <th>Decemner 11,2021 10:17 a.m.</th>
-                <th>0.10.1</th>
-                <th>Added small christmas decor :D</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>Decemner 17,2021 8:00 p.m.</th>
-                <th>0.11.0</th>
-                <th>Added Wack A Mole WOOOOO! Changed the Console (aka output) to look like an old 80s PC</th>
-            </tr>
-            <tr bgcolor="darkblue">
-                <th>Decemner 18,2021 8:30 a.m.</th>
-                <th>0.11.1</th>
-                <th>Fixed a Problem where the bottom wont load</th>
-            </tr>
-        </table>
         <script src="index.js"></script>
     </body>
 </html>

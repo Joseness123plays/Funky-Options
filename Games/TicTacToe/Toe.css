@@ -1,3 +1,20 @@
+body{
+    font-family: 'Press Start 2P';
+    background-color: black;
+    border: dotted;
+    border-color: yellow;
+}
+button{
+    background:white;
+    text-align: center;
+    width: 30vw;
+    height: 30vh;
+    font-size: 29vh;
+    font-family: 'Press Start 2P';
+}
+:disabled{
+    background:white;
+}
 #Loader{
     position: fixed;
     border: 0;
@@ -18,12 +35,3 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-body{
-  background-color: black;
-  color:white;
-  font-family: 'Press Start 2P';
-  font-size: 200%;
-}
-button{
-    font-family: 'Press Start 2P';
-}

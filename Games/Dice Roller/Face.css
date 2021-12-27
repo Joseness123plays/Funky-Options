@@ -1,0 +1,25 @@
+body{
+    font-family: 'Press Start 2P';
+    font-size: 150%;
+    overflow: hidden;
+    display: block;
+    margin: 0px;
+}
+button{
+    font-family: 'Press Start 2P';
+}
+#Loader{
+    background-color: black;
+    border: solid;
+    border-color: black;
+    width: 100%;
+}
+#Loader-TXT{
+    font-family: 'Press Start 2P';
+    position: fixed;
+    color: white;
+    font-size: 110%;
+    left: 40%;
+    right: 40%;
+    top: 50%;
+}

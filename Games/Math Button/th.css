@@ -1,3 +1,19 @@
+body{
+    margin: 0px;
+    font-family: 'Press Start 2P';
+    background: linear-gradient(cyan,#7CFC00);
+    background-attachment: fixed;
+}
+#Title{
+    text-shadow: -5px 5px lightgray;
+    border: dotted;
+    border-color: yellow;
+    padding: 1%;
+}
+#option{
+    left:25%;
+    width: 50%;
+}
 #Loader{
     position: fixed;
     border: 0;
@@ -18,12 +34,3 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-body{
-  background-color: black;
-  color:white;
-  font-family: 'Press Start 2P';
-  font-size: 200%;
-}
-button{
-    font-family: 'Press Start 2P';
-}

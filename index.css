@@ -1,9 +1,69 @@
-body{
-  background: linear-gradient(skyblue,skyblue,skyblue,skyblue,skyblue,lightblue,blue,blue,darkturquoise,gold,green,green,green);
-  background-attachment: fixed;
+#Loader{
+  position: fixed;
+  border: 0;
+  background-color: black;
+  border: solid;
+  border-color: black;
+  width: 100%;
 }
-.a{
-padding: 1%
+#Loader-TXT{
+  font-family: 'Press Start 2P';
+  position: fixed;
+  color: white;
+  left: 40%;
+  right: 40%;
+  top: 50%;
+  animation: swinging;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+#Loader-Items{
+  font-family: 'Press Start 2P';
+  position: fixed;
+  color: white;
+  left: 30%;
+  right: 30%;
+  top: 50%;
+}
+@keyframes swinging{
+  0%{transform: rotateZ(30deg);}
+  50%{transform: rotateZ(-30deg);}
+  100%{transform: rotateZ(30deg);}
+}
+body{
+  color: white;
+  overflow:visible;
+  margin: 0px;
+  /* {old background} background: linear-gradient(skyblue,skyblue,skyblue,skyblue,skyblue,lightblue,blue,blue,darkturquoise,gold,green,green,green);
+  background-attachment: fixed;*/
+  background-image: url("Web_Assets\\Background\\CampFire.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+#Background_Video{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+#Top2{
+  max-height: 10vh;
+  width: 100%;
+}
+#Top1{
+  max-height: 20vh;
+  width: 100%;
+}
+.Floppy{
+  padding: 1%
+}
+main{
+  font-family: 'Press Start 2P';
 }
 .text{
   color: white;
@@ -11,23 +71,34 @@ padding: 1%
   width: 100%;
   border-color:lightgreen green;
 }
+#bottom{
+  background-color: #ffd48a;
+  width: 100vw;
+  height: 90px;
+}
 #console{
   background: linear-gradient(to top,cyan,skyblue,cyan,skyblue,cyan,skyblue,cyan);
-  width:88%;
-  border: solid;
-  border-color:black;
+  float: left;
+  min-width: 80%;
+  max-width: 80%;
+  min-height: 70vh;
 }
 #cons_shell{
-  width:97%;
+  width:90%;
   border-style: inset;
   border-color:black;
   background-color: tan; 
 }
 #title{
-  width:25%;
   color:black;
   border: solid;
-  border-color: #3C3C3C;
+  border-color: black;
+  left: 30%;
+  right: 30%;
+  font-size: 3vh;
+}
+#PC_Empty{
+  width:25%;
 }
 #coint{
   width: 10%;
@@ -43,4 +114,37 @@ padding: 1%
 }
 table{
   color: white;
+}
+#left{
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 70vh;
+  float:left;
+}
+#right{
+  min-width: 10%;
+  max-width: 10%;
+  min-height: 70vh;
+  float: left;
+}
+#PC_Floppy{
+  width: 100%;
+}
+#PC_Disc{
+  width: 100%;
+}
+.Bottom{
+  width: 100%;
+  min-height: 10vh;
+  max-height: 10vh;
+}
+#button{
+  position: static;
+  left: 60vw;
+  width: 15%;
+}
+.drive{
+  width: 100%;
+  min-height: 20vh;
+  max-height: 20vh;
 }

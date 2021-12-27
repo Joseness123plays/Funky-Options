@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>How did you get here?</title>
-        <link rel="stylesheet" href="A.css">
+        <link rel="stylesheet" href="Face.css">
     </head>
-    <body align="center" style="margin: 0px;">
+    <body align="center">
         <div id="Loader">
             <div id="Loader-Items"><h1 id="Loader-TXT">READING</h1></div>
         </div>
@@ -38,7 +37,16 @@
         })
     })();
         </script>
-        <div id="console" align="center"></div>
-        <script src="Mole.js"></script>
+        <button id="btn" onclick="roll()">
+            ---------------------
+            <br>
+            | ! Roll The Dice ! |
+            <br>
+            ---------------------
+        </button>
+        <hr>
+        <div id="txt">{Click the button to start}</div>
+        <img id="img" width="20%">
+        <script src="roller.js"></script>
     </body>
 </html>

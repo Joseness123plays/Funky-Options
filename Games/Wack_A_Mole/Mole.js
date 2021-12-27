@@ -2,7 +2,7 @@ Wack_A_Mole();
 function Wack_A_Mole(){
     document.querySelector("#console").innerText = ""
     let sumbit = document.createElement("button")
-    sumbit.innerText = "submit";
+    sumbit.innerText = "-------\n|submit|\n-------";
     sumbit.onclick = () => {
         document.querySelector("#console").innerText = ""
         let rounds = parseInt(input.value);
@@ -10,11 +10,17 @@ function Wack_A_Mole(){
     }
     let input = document.createElement("input")
     input.type = "number"
+    let backplate = document.createElement("div")
+    backplate.style.backgroundColor = "grey"
     let txt = document.createElement("div")
-    txt.innerText = "How many rounds"
+    txt.innerText = "|How many rounds?|"
+    document.getElementById("console").appendChild(document.createElement("hr"))
     document.querySelector("#console").appendChild(txt)
-    document.querySelector("#console").appendChild(input)
-    document.querySelector("#console").appendChild(sumbit)
+    document.getElementById("console").appendChild(document.createElement("hr"))
+    append(backplate,"console")
+    backplate.appendChild(input)
+    backplate.appendChild(sumbit)
+
     function Game_Start(rounds){
         function makebtn(text){
             let btn = document.createElement("button");
@@ -76,4 +82,7 @@ function Wack_A_Mole(){
             document.querySelector("#console").appendChild(document.createElement("br"))
         }
     }
+}
+function append(wat,where){
+    document.getElementById(where).appendChild(wat);
 }
