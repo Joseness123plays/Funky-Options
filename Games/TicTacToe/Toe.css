@@ -9,7 +9,7 @@ button{
     text-align: center;
     width: 30vw;
     height: 30vh;
-    font-size: 29vh;
+    font-size: 29vw;
     font-family: 'Press Start 2P';
 }
 :disabled{
