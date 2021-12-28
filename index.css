@@ -26,6 +26,10 @@
   right: 30%;
   top: 50%;
 }
+@font-face {
+  font-family:'Press Start 2P';
+  src: url("PressStart2P-Regular.ttf") format("truetype");
+}
 @keyframes swinging{
   0%{transform: rotateZ(30deg);}
   50%{transform: rotateZ(-30deg);}
