@@ -1,3 +1,3 @@
 # Funky-Options
-Messy and buggy
+Messy and buggy,
 idk when ima fix it
